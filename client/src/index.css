@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(224, 15%, 4%);
+  --foreground: hsl(210, 10%, 95%);
+  --card: hsl(224, 15%, 8%);
+  --card-foreground: hsl(210, 10%, 95%);
+  --popover: hsl(224, 15%, 8%);
+  --popover-foreground: hsl(210, 10%, 95%);
+  --primary: hsl(262, 100%, 65%);
+  --primary-foreground: hsl(210, 10%, 95%);
+  --secondary: hsl(224, 15%, 12%);
+  --secondary-foreground: hsl(210, 10%, 85%);
+  --muted: hsl(224, 15%, 10%);
+  --muted-foreground: hsl(210, 10%, 70%);
+  --accent: hsl(210, 100%, 60%);
+  --accent-foreground: hsl(210, 10%, 95%);
+  --destructive: hsl(356, 91%, 54%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(224, 15%, 15%);
+  --input: hsl(224, 15%, 12%);
+  --ring: hsl(262, 100%, 65%);
+  --chart-1: hsl(262, 100%, 65%);
+  --chart-2: hsl(210, 100%, 60%);
+  --chart-3: hsl(42, 93%, 56%);
+  --chart-4: hsl(147, 79%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+  --radius: 0.75rem;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dark {
+  --background: hsl(224, 15%, 4%);
+  --foreground: hsl(210, 10%, 95%);
+  --card: hsl(224, 15%, 8%);
+  --card-foreground: hsl(210, 10%, 95%);
+  --popover: hsl(224, 15%, 8%);
+  --popover-foreground: hsl(210, 10%, 95%);
+  --primary: hsl(262, 100%, 65%);
+  --primary-foreground: hsl(210, 10%, 95%);
+  --secondary: hsl(224, 15%, 12%);
+  --secondary-foreground: hsl(210, 10%, 85%);
+  --muted: hsl(224, 15%, 10%);
+  --muted-foreground: hsl(210, 10%, 70%);
+  --accent: hsl(210, 100%, 60%);
+  --accent-foreground: hsl(210, 10%, 95%);
+  --destructive: hsl(356, 91%, 54%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(224, 15%, 15%);
+  --input: hsl(224, 15%, 12%);
+  --ring: hsl(262, 100%, 65%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Enable smooth native scrolling for modern feel */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Background animations */
+#particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: linear-gradient(45deg, hsl(262, 100%, 65%), hsl(210, 100%, 60%));
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 20s infinite linear;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) rotate(0deg); }
+  100% { transform: translateY(-100vh) rotate(360deg); }
+}
+
+/* 3D cursor following lines */
+#cursor-lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cursor-line {
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  background: linear-gradient(to bottom, hsl(262, 100%, 65%), transparent);
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+/* Glassmorphism effects */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Auto-typing animation */
+.typing-text::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(98, 84, 243, 0.2);
+}
+
+/* Scroll animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Profile image styling */
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 0;
+  border: 4px solid hsl(262, 100%, 65%);
+  box-shadow: 0 0 50px rgba(98, 84, 243, 0.3);
+  object-fit: contain;
+}
+
+/* Skill progress bars */
+.skill-bar {
+  height: 8px;
+  background: hsl(224, 15%, 10%);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, hsl(262, 100%, 65%), hsl(210, 100%, 60%));
+  border-radius: 4px;
+  transition: width 2s ease;
+}
+
+/* Project card animations */
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(98, 84, 243, 0.2);
+}
+
+/* Testimonial cards */
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(224, 15%, 8%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(262, 100%, 65%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(262, 100%, 70%);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(262, 100%, 65%), hsl(210, 100%, 60%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .particle {
+    opacity: 0.05;
+  }
+  
+  .cursor-line {
+    display: none;
+  }
+}
+
+/* Updated scroll animation for testimonials */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 6)); /* 350px is card width + gap, 6 is number of original cards */
+  }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Page scroll progress bar (top) */
+.scroll-progress {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 4px;
+  background: linear-gradient(90deg, hsl(262, 100%, 65%), hsl(210, 100%, 60%));
+  width: 0%;
+  z-index: 10000;
+  transition: width 150ms linear;
+}
+
+/* Smooth parallax transforms for a more polished feel */
+[data-parallax] {
+  transition: transform 300ms cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
+}

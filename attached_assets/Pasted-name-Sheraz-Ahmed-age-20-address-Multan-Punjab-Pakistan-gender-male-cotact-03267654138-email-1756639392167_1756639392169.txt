@@ -1,0 +1,45 @@
+name :Sheraz Ahmed
+age:20
+address:Multan,Punjab Pakistan
+gender; male 
+cotact:03267654138
+email:itssheraz78618@gmail.com
+linkdin-profile :#
+instagram: #
+education :
+University : Doing Software Enginnering From Comsats University
+            cureent semesster 6th 
+      from feb 2023 to june 2027
+college:ICS 90% marks (Punjab Daanish higher secondary  school boys mianwali )
+school Punjab Daanish secondary  school boys mianwali ) marks:91%
+
+skills:
+technical skills: mern stack web develper( C++,python,DSA,oop,SQL,js,html5,tailwind css,no code development  and will introduce ai chat bot in my websites ,app and also taking part in google summer of code and leetcode problem solving techniques,,also working on flutter(dart) in mobile application development,,desktop application using .net framework) 
+SOFT SKILLLS: PROBLEM SOLVING TECHNIQUE,QUIK LEARNER,TIME MANAGEMENT ,PRESSURE HANDLING ,DECISION MAKING,
+Experiance:Fresher
+projects:
+https://github.com/sheraz888444/Ai-Assistant
+https://github.com/sheraz888444/Linkup-Platform
+https://github.com/sheraz888444/SHERAZ-INOTEBOOK-FULLSTACK
+https://github.com/sheraz888444/to-do-app
+https://github.com/sheraz888444/Language_Detector
+https://github.com/sheraz888444/The-Byte-Times-
+https://github.com/sheraz888444/curr-converter
+git hub link :https://github.com/sheraz888444
+
+
+
+
+Interst and future goals :Exploring AI and  learning bubble io ,mobile application development(flutter,dart) collaborating on google summer of code and practice leet code problems for boosting my problem solving technique
+softskills:time management,problem solving techniques,right decisions making ,quik learner
+About Me:
+I’m Sheraz Ahmed, a tech enthusiast driven by curiosity and purpose. I see coding not as a job but as a craft — a way to design solutions that solve real problems and create lasting impact. My journey into technology began with a simple vision: to use innovation to improve lives and bring meaningful change, starting here in Pakistan.
+
+With a strong focus on the MERN Stack, I develop systems that are clean, efficient, and impactful — software that doesn’t just “work” but works for people. Every project I take on is an opportunity to rethink processes, automate intelligently, and build tools that operate quietly yet transform lives.
+
+My ambitions extend beyond full-stack development. I’m deeply interested in making ai  based applications a with a goal to create advanced AI-powered solutions and chatbots that push the limits of what web platforms can do. I want to shape the future of intelligent systems in Pakistan and leave a meaningful digital footprint.
+
+To me, this isn’t just a career choice — it’s a calling to innovate, create, and lead through technology.
+ 
+
+
